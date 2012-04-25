@@ -38,21 +38,21 @@
 		257E9ED815488A11007719BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		257E9EDA15488A11007719BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		257E9EDC15488A11007719BF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		257E9EE015488A11007719BF /* Sandbox-Info.plist */ = {isa = PBXFileReference; path = "Sandbox-Info.plist"; sourceTree = "<group>"; };
+		257E9EE015488A11007719BF /* Sandbox-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sandbox-Info.plist"; sourceTree = "<group>"; };
 		257E9EE215488A11007719BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		257E9EE415488A11007719BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		257E9EE615488A11007719BF /* Sandbox-Prefix.pch */ = {isa = PBXFileReference; path = "Sandbox-Prefix.pch"; sourceTree = "<group>"; };
-		257E9EE715488A11007719BF /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		257E9EE615488A11007719BF /* Sandbox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sandbox-Prefix.pch"; sourceTree = "<group>"; };
+		257E9EE715488A11007719BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		257E9EE815488A11007719BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		257E9EEB15488A11007719BF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		257E9EEE15488A11007719BF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		257E9EF015488A11007719BF /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		257E9EF015488A11007719BF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		257E9EF115488A11007719BF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		257E9EF815488A11007719BF /* SandboxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SandboxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		257E9EF915488A11007719BF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		257E9F0115488A11007719BF /* SandboxTests-Info.plist */ = {isa = PBXFileReference; path = "SandboxTests-Info.plist"; sourceTree = "<group>"; };
+		257E9F0115488A11007719BF /* SandboxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SandboxTests-Info.plist"; sourceTree = "<group>"; };
 		257E9F0315488A11007719BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		257E9F0515488A11007719BF /* SandboxTests.h */ = {isa = PBXFileReference; path = SandboxTests.h; sourceTree = "<group>"; };
+		257E9F0515488A11007719BF /* SandboxTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SandboxTests.h; sourceTree = "<group>"; };
 		257E9F0615488A11007719BF /* SandboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandboxTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
