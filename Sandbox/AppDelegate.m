@@ -7,14 +7,42 @@
 //
 
 #import "AppDelegate.h"
+#import "Result.h"
+#import "ResultsViewController.h"
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    NSMutableArray *results;
+}
 
 @synthesize window = _window;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    results = [NSMutableArray arrayWithCapacity:20];
+	Result *result = [[Result alloc] init];
+	result.name = @"Bill Evans";
+	result.company = @"Axel Rose";
+	result.rating = 4;
+	[results addObject:result];
+	result = [[Result alloc] init];
+	result.name = @"Oscar Peterson";
+	result.company = @"Spin the Bottle";
+	result.rating = 5;
+	[results addObject:result];
+	result = [[Result alloc] init];
+	result.name = @"Dave Brubeck";
+	result.company = @"Texas Hold’em Poker";
+	result.rating = 2;
+	[results addObject:result];
+	UITabBarController *tabBarController = 
+    (UITabBarController *)self.window.rootViewController;
+	UINavigationController *navigationController = 
+    [[tabBarController viewControllers] objectAtIndex:0];
+	ResultsViewController *ResultsViewController = 
+    [[navigationController viewControllers] objectAtIndex:0];
+	ResultsViewController.results = results;
     return YES;
 }
 							

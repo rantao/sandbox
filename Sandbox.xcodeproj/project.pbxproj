@@ -21,6 +21,8 @@
 		257E9EFC15488A11007719BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257E9EDA15488A11007719BF /* Foundation.framework */; };
 		257E9F0415488A11007719BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 257E9F0215488A11007719BF /* InfoPlist.strings */; };
 		257E9F0715488A11007719BF /* SandboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 257E9F0615488A11007719BF /* SandboxTests.m */; };
+		25B23BDF1548A26400A8AF60 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B23BDE1548A26400A8AF60 /* ResultsViewController.m */; };
+		25B23BE31548A33300A8AF60 /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B23BE21548A33300A8AF60 /* Result.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		257E9F0315488A11007719BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		257E9F0515488A11007719BF /* SandboxTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SandboxTests.h; sourceTree = "<group>"; };
 		257E9F0615488A11007719BF /* SandboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandboxTests.m; sourceTree = "<group>"; };
+		25B23BDD1548A26400A8AF60 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
+		25B23BDE1548A26400A8AF60 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		25B23BE11548A33300A8AF60 /* Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
+		25B23BE21548A33300A8AF60 /* Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,10 @@
 				257E9EE715488A11007719BF /* AppDelegate.h */,
 				257E9EE815488A11007719BF /* AppDelegate.m */,
 				257E9EEA15488A11007719BF /* MainStoryboard_iPhone.storyboard */,
+				25B23BDD1548A26400A8AF60 /* ResultsViewController.h */,
+				25B23BE11548A33300A8AF60 /* Result.h */,
+				25B23BE21548A33300A8AF60 /* Result.m */,
+				25B23BDE1548A26400A8AF60 /* ResultsViewController.m */,
 				257E9EED15488A11007719BF /* MainStoryboard_iPad.storyboard */,
 				257E9EF015488A11007719BF /* ViewController.h */,
 				257E9EF115488A11007719BF /* ViewController.m */,
@@ -264,6 +274,8 @@
 				257E9EE515488A11007719BF /* main.m in Sources */,
 				257E9EE915488A11007719BF /* AppDelegate.m in Sources */,
 				257E9EF215488A11007719BF /* ViewController.m in Sources */,
+				25B23BDF1548A26400A8AF60 /* ResultsViewController.m in Sources */,
+				25B23BE31548A33300A8AF60 /* Result.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +455,7 @@
 				257E9F0C15488A11007719BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		257E9F0D15488A11007719BF /* Build configuration list for PBXNativeTarget "SandboxTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +464,7 @@
 				257E9F0F15488A11007719BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
