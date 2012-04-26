@@ -37,7 +37,7 @@
                                         </label>
                                         <imageView userInteractionEnabled="NO" tag="102" contentMode="scaleAspectFit" id="4KL-GS-sBz">
                                             <rect key="frame" x="199" y="4" width="81" height="51"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -46,6 +46,7 @@
                                     <outlet property="companyLabel" destination="ASR-vo-6hx" id="hPM-T5-cvN"/>
                                     <outlet property="nameLabel" destination="efe-cY-0Ty" id="tQf-Ul-HKu"/>
                                     <outlet property="ratingImageView" destination="4KL-GS-sBz" id="f3w-JD-ac4"/>
+                                    <segue destination="wd9-tE-Xd6" kind="push" id="v2j-ex-pAM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -54,33 +55,63 @@
                             <outlet property="delegate" destination="Dwc-NN-Jtj" id="p9S-H0-ZIK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search List" id="ro1-73-FrA"/>
+                    <navigationItem key="navigationItem" title="Search List" id="ro1-73-FrA">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="XrS-h9-Kmz">
+                            <connections>
+                                <segue destination="8Gl-Or-gWC" kind="push" id="im9-Rc-O7Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1123" y="-1091"/>
         </scene>
-        <scene sceneID="gXf-G8-bMh">
+        <scene sceneID="0Va-j9-1un">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8x9-hX-Ocu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Vkk-bD-axD" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pEh-uU-dvj">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eon-Bt-xZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="8Gl-Or-gWC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fkf-ZF-HKS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fro-XF-KbL">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="jAY-y0-l00"/>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1583" y="-1309"/>
+        </scene>
+        <scene sceneID="lx7-kx-VLd">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fIo-0S-dKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="wd9-tE-Xd6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4US-ZI-Hjt">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Second Tab" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="oEK-U8-j6t">
-                                <rect key="frame" x="114" y="20" width="93" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="j4W-UB-NzR">
+                                <rect key="frame" x="20" y="31" width="46" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="UoH-RW-UCN">
+                                <rect key="frame" x="13" y="79" width="287" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Saved" id="ZO7-Hy-Jew"/>
+                    <navigationItem key="navigationItem" id="iMg-LN-8cQ"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="669" y="-405"/>
+            <point key="canvasLocation" x="1583" y="-718"/>
         </scene>
         <scene sceneID="odi-pV-1IB">
             <objects>
@@ -94,7 +125,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Beq-5R-udn" kind="relationship" relationship="viewControllers" id="QTv-FO-TYS"/>
-                        <segue destination="Vkk-bD-axD" kind="relationship" relationship="viewControllers" id="fSa-aq-lah"/>
+                        <segue destination="v9f-1a-lQd" kind="relationship" relationship="viewControllers" id="fSa-aq-lah"/>
                     </connections>
                 </tabBarController>
             </objects>
@@ -118,6 +149,53 @@
             </objects>
             <point key="canvasLocation" x="597" y="-1091"/>
         </scene>
+        <scene sceneID="lSo-Fy-fHX">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ao-eU-Etb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="v9f-1a-lQd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Saved" id="ZO7-Hy-Jew"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="7tu-f7-Rih">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pxm-2J-FDu" kind="relationship" relationship="rootViewController" id="sSN-7j-r8X"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="669" y="-405"/>
+        </scene>
+        <scene sceneID="x2B-az-L43">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9sv-s7-hBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="Pxm-2J-FDu" customClass="SavedViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Uo6-GX-82C">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fP4-mJ-M4x">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Pxm-2J-FDu" id="wBk-zm-BS3"/>
+                            <outlet property="delegate" destination="Pxm-2J-FDu" id="Gfr-27-FWX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Saved Cities" id="aQt-5w-j9i"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1065" y="-405"/>
+        </scene>
     </scenes>
     <classes>
         <class className="ResultCell" superclassName="UITableViewCell">
@@ -130,6 +208,9 @@
         </class>
         <class className="ResultsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ResultsViewController.h"/>
+        </class>
+        <class className="SavedViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SavedViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

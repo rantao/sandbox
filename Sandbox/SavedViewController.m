@@ -1,18 +1,19 @@
 //
-//  ResultsViewController.m
+//  SavedViewController.m
 //  Sandbox
 //
 //  Created by Ran Tao on 4.25.12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "ResultsViewController.h"
-#import "Result.h"
-#import "ResultCell.h"
+#import "SavedViewController.h"
 
 
-@implementation ResultsViewController
-@synthesize results;
+@implementation SavedViewController
+
+@synthesize cityname;
+@synthesize populution;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,6 +38,16 @@
 {
     [super viewDidLoad];
 
+    //load plist with data
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Cities" ofType:@"plist"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSPropertyListFormat format;
+    NSString *error;
+    id fileContents = [NSPropertyListSerialization propertyListFromData:data mutabilityOption:NSPropertyListImmutable format:&format errorDescription:&error];
+    self.populution = [[fileContents objectForKey:@"City Population"] mutableCopy];
+    self.cityname = [[fileContents objectForKey:@"City Names"] mutableCopy];
+
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -90,31 +101,24 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.results count];
-}
-
-- (UIImage *)imageForRating:(int)rating
-{
-    switch (rating)
-    {
-    case 1: return [UIImage imageNamed:@"1starSmall.png"];
-    case 2: return [UIImage imageNamed:@"2starsSmall.png"];
-    case 3: return [UIImage imageNamed:@"3starsSmall.png"];
-    case 4: return [UIImage imageNamed:@"4starsSmall.png"];
-    case 5: return [UIImage imageNamed:@"5starsSmall.png"];
-
-    }
-    return nil;
+    return [self.cityname count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    static NSString *cellID = @"CellID";
     
-    ResultCell *cell = (ResultCell *) [tableView dequeueReusableCellWithIdentifier:@"ResultCell"];
-	Result *result = [self.results objectAtIndex:indexPath.row];
-	cell.nameLabel.text = result.name;
-	cell.companyLabel.text = result.company;
-	cell.ratingImageView.image = [self imageForRating:result.rating];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) { //create new cell
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+        cell.showsReorderControl = YES;
+    }
+    cell.textLabel.text = [self.cityname objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Population: %@", [self.populution objectAtIndex:indexPath.row]];
+    cell.imageView.image = [UIImage imageNamed:@"CaliforniaIcon.png"];
+    cell.imageView.highlightedImage = [UIImage imageNamed:@"CaliforniaIconPressed.png"];
+    
+    // Configure the cell...
     
     return cell;
 }
@@ -128,24 +132,19 @@
 }
 */
 
-
+/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    //for removing from results list
-    [self.results removeObjectAtIndex:indexPath.row];
-
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }  
-    
+    }   
 }
-
+*/
 
 /*
 // Override to support rearranging the table view.
