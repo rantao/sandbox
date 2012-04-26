@@ -22,18 +22,18 @@
     // Override point for customization after application launch.
     results = [NSMutableArray arrayWithCapacity:20];
 	Result *result = [[Result alloc] init];
-	result.name = @"Bill Evans";
-	result.company = @"Axel Rose";
+	result.name = @"Hallisy Julia DDS";
+	result.company = @"595 Buckingham Way";
 	result.rating = 4;
 	[results addObject:result];
 	result = [[Result alloc] init];
-	result.name = @"Oscar Peterson";
-	result.company = @"Spin the Bottle";
+	result.name = @"Gentry Emily G, DDS";
+	result.company = @"220 Montgomery St # 120";
 	result.rating = 5;
 	[results addObject:result];
 	result = [[Result alloc] init];
-	result.name = @"Dave Brubeck";
-	result.company = @"Texas Hold’em Poker";
+	result.name = @"Richard A Felton, DDS";
+	result.company = @"450 Sutter St # 1630";
 	result.rating = 2;
 	[results addObject:result];
 	UITabBarController *tabBarController = 

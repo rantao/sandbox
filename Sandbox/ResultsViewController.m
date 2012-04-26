@@ -8,6 +8,7 @@
 
 #import "ResultsViewController.h"
 #import "Result.h"
+#import "ResultCell.h"
 
 
 @implementation ResultsViewController
@@ -92,14 +93,28 @@
     return [self.results count];
 }
 
+- (UIImage *)imageForRating:(int)rating
+{
+    switch (rating)
+    {
+    case 1: return [UIImage imageNamed:@"1starSmall.png"];
+    case 2: return [UIImage imageNamed:@"2starsSmall.png"];
+    case 3: return [UIImage imageNamed:@"3starsSmall.png"];
+    case 4: return [UIImage imageNamed:@"4starsSmall.png"];
+    case 5: return [UIImage imageNamed:@"5starsSmall.png"];
+
+    }
+    return nil;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResultCell"];
-    Result *result = [self.results objectAtIndex:indexPath.row];
-    cell.textLabel.text = result.name;
-    cell.detailTextLabel.text = result.company;
-    // Configure the cell...
+    ResultCell *cell = (ResultCell *) [tableView dequeueReusableCellWithIdentifier:@"ResultCell"];
+	Result *result = [self.results objectAtIndex:indexPath.row];
+	cell.nameLabel.text = result.name;
+	cell.companyLabel.text = result.company;
+	cell.ratingImageView.image = [self imageForRating:result.rating];
     
     return cell;
 }
