@@ -1,18 +1,16 @@
 //
-//  ResultsViewController.m
+//  FilterDetailsViewController.m
 //  Sandbox
 //
 //  Created by Ran Tao on 4.25.12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "ResultsViewController.h"
-#import "Result.h"
-#import "ResultCell.h"
+#import "FilterDetailsViewController.h"
 
 
-@implementation ResultsViewController
-@synthesize results;
+@implementation FilterDetailsViewController
+@synthesize delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -83,38 +81,26 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.results count];
-}
-
-- (UIImage *)imageForRating:(int)rating
-{
-    switch (rating)
-    {
-    case 1: return [UIImage imageNamed:@"1starSmall.png"];
-    case 2: return [UIImage imageNamed:@"2starsSmall.png"];
-    case 3: return [UIImage imageNamed:@"3starsSmall.png"];
-    case 4: return [UIImage imageNamed:@"4starsSmall.png"];
-    case 5: return [UIImage imageNamed:@"5starsSmall.png"];
-
-    }
-    return nil;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    static NSString *CellIdentifier = @"Cell";
     
-    ResultCell *cell = (ResultCell *) [tableView dequeueReusableCellWithIdentifier:@"ResultCell"];
-	Result *result = [self.results objectAtIndex:indexPath.row];
-	cell.nameLabel.text = result.name;
-	cell.companyLabel.text = result.company;
-	cell.ratingImageView.image = [self imageForRating:result.rating];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell...
     
     return cell;
 }
@@ -128,24 +114,19 @@
 }
 */
 
-
+/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    //for removing from results list
-    [self.results removeObjectAtIndex:indexPath.row];
-
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }  
-    
+    }   
 }
-
+*/
 
 /*
 // Override to support rearranging the table view.
@@ -176,28 +157,14 @@
      */
 }
 
-// tell the viewcontroll that is it now its delegate
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (IBAction)cancel:(id)sender;
 {
-    if ([segue.identifier isEqualToString:@"Filters"]) {
-        UINavigationController *navigationController = segue.destinationViewController;
-        FilterDetailsViewController *filterDetailsViewController = [[navigationController viewControllers] objectAtIndex:0];
-        filterDetailsViewController.delegate = self;
-    }
+    [self.delegate filterDetailsViewControllerDidCancel:self];
 }
 
-
-#pragma mark - FilterDetailsViewControllerDelegate
-
-- (void)filterDetailsViewControllerDidCancel:(FilterDetailsViewController *)controller
+- (IBAction)done:(id)sender;
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)filterDetailsViewControllerDidSave:(FilterDetailsViewController *)controller
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.delegate filterDetailsViewControllerDidSave:self];
 }
 
 

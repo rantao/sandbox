@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FilterDetailsViewController.h"
 
-@interface ResultsViewController : UITableViewController
+
+
+@interface ResultsViewController : UITableViewController <FilterDetailsViewControllerDelegate>
 @property (nonatomic,strong) NSMutableArray *results;
 
 @end

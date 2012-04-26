@@ -54,6 +54,7 @@
 		25CDAAB21548D5D500E3D00E /* CaliforniaIconPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CDAAAE1548D5D500E3D00E /* CaliforniaIconPressed@2x.png */; };
 		25CDAAB31548D5D500E3D00E /* CaliforniaIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CDAAAF1548D5D500E3D00E /* CaliforniaIcon@2x.png */; };
 		25CDAAB41548D5D500E3D00E /* CaliforniaIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CDAAB01548D5D500E3D00E /* CaliforniaIcon.png */; };
+		25CDAAB71548DCDA00E3D00E /* FilterDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CDAAB61548DCDA00E3D00E /* FilterDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,8 @@
 		25CDAAAE1548D5D500E3D00E /* CaliforniaIconPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CaliforniaIconPressed@2x.png"; path = "../../../Downloads/Icons/CaliforniaIconPressed@2x.png"; sourceTree = "<group>"; };
 		25CDAAAF1548D5D500E3D00E /* CaliforniaIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CaliforniaIcon@2x.png"; path = "../../../Downloads/Icons/CaliforniaIcon@2x.png"; sourceTree = "<group>"; };
 		25CDAAB01548D5D500E3D00E /* CaliforniaIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CaliforniaIcon.png; path = ../../../Downloads/Icons/CaliforniaIcon.png; sourceTree = "<group>"; };
+		25CDAAB51548DCDA00E3D00E /* FilterDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterDetailsViewController.h; sourceTree = "<group>"; };
+		25CDAAB61548DCDA00E3D00E /* FilterDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,8 @@
 				25CDAAA51548BED400E3D00E /* ResultCell.h */,
 				25CDAAA61548BED400E3D00E /* ResultCell.m */,
 				257E9EEA15488A11007719BF /* MainStoryboard_iPhone.storyboard */,
+				25CDAAB51548DCDA00E3D00E /* FilterDetailsViewController.h */,
+				25CDAAB61548DCDA00E3D00E /* FilterDetailsViewController.m */,
 				25CDAAAA1548D12900E3D00E /* SavedViewController.h */,
 				25CDAAAB1548D12900E3D00E /* SavedViewController.m */,
 				25CDAAAD1548D5D500E3D00E /* CaliforniaIconPressed.png */,
@@ -404,6 +409,7 @@
 				25B23BE31548A33300A8AF60 /* Result.m in Sources */,
 				25CDAAA71548BED400E3D00E /* ResultCell.m in Sources */,
 				25CDAAAC1548D12A00E3D00E /* SavedViewController.m in Sources */,
+				25CDAAB71548DCDA00E3D00E /* FilterDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
